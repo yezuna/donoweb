@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hershey Landscaping</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="../../../School/tsa_bhavik/css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../../../School/tsa_bhavik/js/singlePageTemplate.js"></script>
 
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
 <script>var __adobewebfontsappname__="dreamweaver"</script>
@@ -344,10 +345,10 @@
       </div>
       <div class="contact">
         <div class="contact-form">
-          <form>
+		<form id="fcf-form-id" method="post" action="contact.php">
             <div class="row">
               <div class="input50">
-                <input type="text" placeholder="First Name" />
+                <input type="text" id="Name" name="Name" placeholder="First Name" required/>
               </div>
               <div class="input50">
                 <input type="text" placeholder="Last Name" />
@@ -355,7 +356,7 @@
             </div>
             <div class="row">
               <div class="input50">
-                <input type="text" placeholder="Email" />
+                <input type="email" id="Email" name="Email" placeholder="Email" />
               </div>
               <div class="input50">
                 <input type="text" placeholder="Subject" />
@@ -363,12 +364,12 @@
             </div>
             <div class="row">
               <div class="input100">
-                <textarea placeholder="Message"></textarea>
+                <textarea id="Message" name="Message" placeholder="Message"></textarea>
               </div>
             </div>
             <div class="row">
               <div class="input100">
-                <input type="submit" value="Send" />
+                <button type="submit" id="fcf-button" value="Send">Submit</button>
               </div>
             </div>
           </form>
@@ -419,6 +420,7 @@
 		var navigation = document.querySelector(".navigation");
 		toggleButton.addEventListener("click", function () {
 			toggleButton.classList.toggle("active");
+			
 			navigation.classList.toggle("active");
 		});
 		navigation.addEventListener("click", function () {
@@ -428,4 +430,6 @@
 	</script>
 	
 </html>
+
+
 	
